@@ -19,9 +19,14 @@ export const GigGrid = ({ category }) => {
     <>
       <h3>{category}</h3>
       <div className="card-grid">
-        {images.map(({ id, title }) => (
-            <GiftItem key={id}/>
-        ))}
+        {
+        images.map((image) => (
+            <GiftItem 
+            key={image.id}
+            { ...image }
+            />
+        ))
+        }
       </div>
     </>
   );
